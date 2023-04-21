@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function Info(subject, credit){
+            this.subject = subject;
+            this.credit = credit;
+            this.printOut = function(){
+                return this.subject+","+this.credit+"학점";
+            }
+        }
+
+        function display(sub1){
+            document.write(sub1.subject);
+            document.write(sub1.credit);
+            document.write(sub1.printOut());
+        }
+
+        function display(sub2){
+            document.write("<br>"+sub2.subject);
+            document.write("<br>"+sub2.credit);
+            document.write("<br>"+sub2.printOut());
+        }
+
+        function display(sub3){
+            document.write("<br>"+sub3.subject);
+            document.write("<br>"+sub3.credit);
+            document.write("<br>"+sub3.printOut());
+        }
+
+        var sub1 = new Info('javascript', 1)
+        /*
+        document.write(sub1.subject);
+        document.write(sub1.credit);
+        document.write(sub1.printOut());
+        */
+
+        var sub2 = new Info('css', 2)
+        /*
+        document.write("<br>"+sub2.subject);
+        document.write("<br>"+sub2.credit);
+        document.write("<br>"+sub2.printOut());
+        */
+        var sub3 = new Info('java',3)
+
+        display(sub1);
+        display(sub2);
+        display(sub3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
